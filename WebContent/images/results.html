@@ -1,0 +1,63 @@
+<script type='text/javascript'>
+	function toggle_visibility(tbid,lnkid){
+	 if(document.all)
+		{document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == 'block' ? 'none' : 'block';}
+	 else
+		{document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == 'table' ? 'none' : 'table';}
+	  	document.getElementById(lnkid).value = document.getElementById(lnkid).value == '[-] Collapse' ? '[+] Expand' : '[-] Collapse'; }
+</script>
+<style type='text/css'>
+.heading {font-family: Franklin Gothic Medium ; font-style: bold; color: White; font-size: 17pt; background-color: #2B547E;} 
+.Title { font-family: Franklin Gothic Medium ; color:purple;  font-size: 8pt;}
+.subheading {BORDER: #8eb3d8 2px solid;FONT-SIZE: 11pt;COLOR: white;FONT-FAMILY: Franklin Gothic Medium;text-align: center;BACKGROUND-COLOR :  #319AFD;}
+.subheading1{BORDER: #8eb3d8 1px solid;FONT-SIZE: 10pt;COLOR: #3366FF;FONT-FAMILY:Franklin Gothic Medium;text-align: center;HEIGHT: 20px;}
+.subheading2{FONT-SIZE: 12pt;FONT-WEIGHT: bold;COLOR:#3B3131;FONT-FAMILY: Franklin Gothic Medium;BACKGROUND-COLOR:White;}
+.border{BORDER: #8eb3d8 1px solid;FONT-SIZE: 10pt;COLOR:#34282C;FONT-WEIGHT: bold;FONT-FAMILY:Calibri;}
+.alt {background-color:#E1EEF4}
+.border_Pass{BORDER: #8eb3d8 1px solid;FONT-SIZE: 9pt;COLOR:Green;BACKGROUND-COLOR:White;FONT-FAMILY:Franklin Gothic Medium;}
+.border_Done{BORDER: #8eb3d8 1px solid;FONT-SIZE: 9pt;COLOR:Blue;BACKGROUND-COLOR:White;FONT-FAMILY:Franklin Gothic Medium;}
+.border_Fail{BORDER: #8eb3d8 1px solid;COLOR: Red;FONT-SIZE: 9pt;BACKGROUND-COLOR:white;FONT-FAMILY:Franklin Gothic Medium;}
+.border_Done{BORDER: #8eb3d8 1px solid;FONT-SIZE: 9pt;COLOR: #0000FF;FONT-FAMILY: Franklin Gothic Medium;}
+.border_Warning{BORDER: #8eb3d8 1px solid;FONT-SIZE:9pt;COLOR: Maroon;FONT-FAMILY: Franklin Gothic Medium;}
+.border_Fail_Final{BORDER: #8eb3d8 1px solid;COLOR:  #0000FF; font-style: bold;FONT-SIZE: 9pt;BACKGROUND-COLOR: #F9966B;FONT-FAMILY: Franklin Gothic Medium;}
+.border_Pass_Final{BORDER: #8eb3d8 1px solid;COLOR:  #0000FF; font-style: bold;FONT-SIZE: 9pt;BACKGROUND-COLOR: #B5EAAA;FONT-FAMILY:Franklin Gothic Medium;}
+strong{COLOR:#3366FF;FONT-FAMILY: Franklin Gothic Medium}
+#tbl1,#tbl2,#tbl3,#tbl4,#tbl5,#tbl6,#tbl7,#tbl8,#tbl9,#tbl10,#tbl11,#tbl12,#tbl13,#tbl14,#tbl15  {display:none;}
+#lnk1,#lnk2,#lnk3,#lnk4,#lnk5,#lnk6,#lnk7,#lnk8,#lnk9,#lnk10,#lnk11,#lnk12,#lnk13,#lnk14,#lnk15 {border:none;background:none;width:85px;}
+</style>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
+		<title>Detail Report</title>
+</head>
+<body>
+
+<table>
+<br></table>
+<table width = 100% border=2 BORDERCOLOR= #0066CC cellpadding=0 > 
+<tr>
+<td class= heading align= center > DetailedReport : Testing1</td> 
+</tr>
+</table><br>
+<table align='center' width = 100%>
+<tr>
+	<td class='subheading1'>Execution Start Time : _12.23.03_PM </td>
+	<td class='subheading1'>Execution Date  : 08.06.2016</td>
+</tr>
+</table><br>
+
+<table width:100% bgcolor='#EEEEEE' cellspacing =0 >
+	<tr><td bgcolor='#8eb3d8' colspan='3'></td></tr>
+	<tr>
+	</tr>
+	<tr><td bgcolor='#8eb3d8' colspan='3'></td></tr>	
+	</table>
+<table style='word-wrap:break-word;table-layout: fixed'; width=100% id='tbliHTMLTableLink' cellspacing=0>
+	<tr>
+<td class='subheading'>Step Number</td>
+<td class='subheading'>Step Descrption</td>
+<td class='subheading'>Expected Result</td>
+<td class='subheading'>Actual Result</td>
+<td class='subheading'>Result</td>
+<td class='subheading'>Screenshot</td>
+<tr><td class= 'border'>1</td><td class= 'border'>LoadApplication in Chrome</td><td class= 'border'>https://www.google.comis opened in browser Chrome</td><td class= 'border'>https://www.google.comis opened in browser Chrome</td><td class= 'border_Pass'>Pass</td><td class='border'><a href='Screenshots/08.06.2016__12.23.11_PM.png'>Screenshot</a></td></tr>
+<tr><td class= 'border'>2</td><td class= 'border'>EnterText for </td><td class= 'border'>testshould be entered in .</td><td class= 'border'>testis entered in .</td><td class= 'border_Pass'>Pass</td><td class='border'><a href='Screenshots/_08.06.2016__12.23.14_PM.png'>Screenshot</a></td></tr>

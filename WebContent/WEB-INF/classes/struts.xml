@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+   <package name="default" extends="struts-default">
+       
+        <action name="welcome" class="com.selenium.controller.GlobalAction"  method="execute">
+            <result name="newSession">/jsp/landingPage.jsp</result> 
+             <result name="existingSession" >displayTestcaseAction.action</result>   
+             
+      </action>
+       
+     
+      <action name="help" class="com.selenium.controller.GlobalAction"  method="callLogin">
+            <result name="success">/jsp/help.jsp</result>
+      </action>
+      
+      <action name="login" class="com.selenium.controller.GlobalAction"  method="callLogin">
+            <result name="success">/jsp/login.jsp</result>
+            
+      </action>
+      
+      <action name="logout" class="com.selenium.controller.GlobalAction"  method="callLogout">
+            <result name="success">/jsp/login.jsp</result>    
+      </action>
+      
+       <action name="loginSubmit" class="com.selenium.controller.LoginAction"  method="execute">
+            <result type="redirectAction" name="success">
+                <param name="actionName">displayTestcaseAction</param>
+             </result>
+             <result name="input">/jsp/login.jsp</result>
+            
+      </action>
+      
+        <action name="displayTestcaseAction" class="com.selenium.controller.TestCaseAction" method="execute">
+            <result name="success">/jsp/testcases.jsp</result>
+             <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      <action name="addFolder" class="com.selenium.controller.TestCaseAction" method="addFolder">
+            <result name="success">/jsp/testcases.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      <action name="deleteFolder" class="com.selenium.controller.TestCaseAction" method="deleteFolder">
+            <result name="success">/jsp/testcases.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      
+      <action name="addTestCase" class="com.selenium.controller.TestCaseAction" method="addTestCase">
+            <result name="success">/jsp/testcases.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+       <action name="deleteTestCase" class="com.selenium.controller.TestCaseAction" method="deleteTestCase">
+            <result name="success">/jsp/testcases.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+        <action name="selectTestCase" class="com.selenium.controller.TestCaseAction" method="selectTestCase">
+            <result name="success">/jsp/testcases.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+          <action name="saveTestCase" class="com.selenium.controller.TestCaseAction" method="saveTestCase">
+            <result name="success">/jsp/testcases.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      <action name="runTestCase" class="com.selenium.controller.TestCaseAction" method="runTestCase">
+            <result name="success">/jsp/testcases.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+       <action name="freetrial" class="com.selenium.controller.GlobalAction" method="callFreeTrial">
+            <result name="success">/jsp/signupTrial.jsp</result>
+      </action>
+      
+       <action name="signupSubmit" class="com.selenium.controller.SignupAction" method="execute">
+            <result name="success">/jsp/success.jsp</result>
+            <result name="input">/jsp/signupTrial.jsp</result>
+      </action>
+      
+        <action name="verify" class="com.selenium.controller.VerifyAction" method="execute">
+            <result name="success">/jsp/login.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+       <action name="displayTestScenarioAction" class="com.selenium.controller.TestScenarioAction" method="execute">
+            <result name="success">/jsp/testscenario.jsp</result>
+             <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+       <action name="addScenarioFolder" class="com.selenium.controller.TestScenarioAction" method="addFolder">
+            <result name="success">/jsp/testscenario.jsp</result>
+             <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      <action name="deleteScenarioFolder" class="com.selenium.controller.TestScenarioAction" method="deleteFolder">
+            <result name="success">/jsp/testscenario.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+       <action name="addTestScenario" class="com.selenium.controller.TestScenarioAction" method="addTestScenario">
+            <result name="success">/jsp/testscenario.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+       <action name="selectTestScenario" class="com.selenium.controller.TestScenarioAction" method="selectTestScenario">
+            <result name="success">/jsp/testscenario.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      <action name="deleteTestScenario" class="com.selenium.controller.TestScenarioAction" method="deleteTestScenario">
+            <result name="success">/jsp/testscenario.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      <action name="saveTestScenario" class="com.selenium.controller.TestScenarioAction" method="saveTestScenario">
+            <result name="success">/jsp/testscenario.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      <action name="runTestScenario" class="com.selenium.controller.TestScenarioAction" method="runTestScenario">
+            <result name="success">/jsp/testscenario.jsp</result>
+            <result name="input">/jsp/login.jsp</result>
+      </action>
+      
+      <action name="getTestCaseData" class="com.selenium.controller.TestScenarioAjaxAction" method="execute">
+            <result type="stream">
+			     <param name="contentType">text/html</param>
+			     <param name="inputName">inputStream</param>
+			  </result>
+      </action>
+      
+      <action name="getTestCaseScenarios" class="com.selenium.controller.TestCaseAjaxAction" method="getTestCaseScenarios">
+            <result type="stream">
+			     <param name="contentType">text/html</param>
+			     <param name="inputName">inputStream</param>
+			  </result>
+      </action>
+      
+      <action name="getFolderScenarios" class="com.selenium.controller.TestCaseAjaxAction" method="getFolderScenarios">
+            <result type="stream">
+			     <param name="contentType">text/html</param>
+			     <param name="inputName">inputStream</param>
+			  </result>
+      </action>
+      
+       <action name="checkTestCaseTitle" class="com.selenium.controller.TestCaseAjaxAction" method="checkTestCaseTitle">
+            <result type="stream">
+			     <param name="contentType">text/html</param>
+			     <param name="inputName">inputStream</param>
+			  </result>
+      </action>
+      
+      <action name="checkFolderTitle" class="com.selenium.controller.TestCaseAjaxAction" method="checkFolderTitle">
+            <result type="stream">
+			     <param name="contentType">text/html</param>
+			     <param name="inputName">inputStream</param>
+			  </result>
+      </action>
+      
+      <action name="checkScenarioTitle" class="com.selenium.controller.TestScenarioAjaxAction" method="checkScenarioTitle">
+            <result type="stream">
+			     <param name="contentType">text/html</param>
+			     <param name="inputName">inputStream</param>
+			  </result>
+      </action>
+      
+      <action name="checkScenarioFolderTitle" class="com.selenium.controller.TestScenarioAjaxAction" method="checkScenarioFolderTitle">
+            <result type="stream">
+			     <param name="contentType">text/html</param>
+			     <param name="inputName">inputStream</param>
+			  </result>
+      </action>
+      
+   </package>
+</struts>

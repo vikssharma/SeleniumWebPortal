@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="connection.url">
+			jdbc:mysql://in-cdbr-azure-south-c.cloudapp.net:3306/seleniumwebportaldb
+		</property>
+		<property name="connection.username">bfc4cadef443c2</property>
+		<property name="connection.password">1b069dbb</property>
+		<property name="connection.pool_size">100</property>
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="cache.provider_class">
+			org.hibernate.cache.NoCacheProvider
+		</property>
+		<property name="show_sql">false</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping class="com.selenium.model.Project" />
+		<mapping class="com.selenium.model.User" />
+		<mapping class="com.selenium.model.Folder" />
+		<mapping class="com.selenium.model.TestCase" />
+		<mapping class="com.selenium.model.Action" />
+		<mapping class="com.selenium.model.TestCaseStep" />
+		<mapping class="com.selenium.model.ScenarioFolder" />
+		<mapping class="com.selenium.model.TestScenario" />
+		<mapping class="com.selenium.model.TestScenarioStep" />
+		<mapping class="com.selenium.model.TestScenarioInput" />
+		
+	</session-factory>
+</hibernate-configuration>
