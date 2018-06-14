@@ -9,10 +9,10 @@
 			com.mysql.jdbc.Driver
 		</property>
 		<property name="connection.url">
-			jdbc:mysql://in-cdbr-azure-south-c.cloudapp.net:3306/seleniumwebportaldb
+			jdbc:mysql://seleniumwebportaldb.cnxaylsmyo71.us-east-2.rds.amazonaws.com:3306/seleniumwebportaldb
 		</property>
-		<property name="connection.username">bfc4cadef443c2</property>
-		<property name="connection.password">1b069dbb</property>
+		<property name="connection.username">admin</property>
+		<property name="connection.password">#Welcome01</property>
 		<property name="connection.pool_size">100</property>
 		<property name="dialect">
 			org.hibernate.dialect.MySQLDialect
